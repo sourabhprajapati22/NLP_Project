@@ -19,6 +19,7 @@ This project implements an end-to-end pipeline for scraping, processing, analyzi
   - [6. Model Training](#6-model-training)
     - [Models Used](#models-used)
   - [7. Inference Pipeline](#7-inference-pipeline)
+- [Final Results](#final-results)
 - [Known Issues and Future Improvements](#known-issues-and-future-improvements)
 - [License](#license)
 
@@ -174,10 +175,39 @@ python inference.py
 
 ---
 
+## Final Results
+
+After training and evaluating the models, the following performance metrics were observed:
+
+### Logistic Regression:
+- Accuracy: ~92%
+- F1-Score (Positive): 0.96
+- F1-Score (Neutral): 0.62
+- F1-Score (Negative): 0.61
+
+### Decision Tree:
+- Accuracy: ~85%
+- F1-Score (Positive): 0.92
+- F1-Score (Neutral): 0.59
+- F1-Score (Negative): 0.58
+
+### Random Forest:
+- Accuracy: ~93%
+- F1-Score (Positive): 0.97
+- F1-Score (Neutral): 0.65
+- F1-Score (Negative): 0.66
+
+### Recommendation Decision:
+If the majority of predicted sentiments for a product’s reviews are positive, the product is marked as:
+** Recommended for the customer**  
+Otherwise, it is:
+** Not recommended to the customer**
+
+---
+
 ## Known Issues and Future Improvements
 
 - Improve scraping robustness for website changes
-- Refine emoji mapping
 - Add Docker container for deployment
 - Include support for multilingual reviews
 
