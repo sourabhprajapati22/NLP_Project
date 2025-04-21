@@ -61,7 +61,7 @@ The project is structured as an integrated solution with the following capabilit
 ## File Structure
 
 ```
-main_project/
+NLP_Project/
 ├── myntra_sentiment_analysis/
 │   ├── scraping/
 │   │   ├── myntra_scraper.py
@@ -83,6 +83,10 @@ main_project/
 │   │       ├── decision_tree_model.joblib
 │   │       └── logistic_regression_model.joblib
 ├── inference.py
+├── scraping.py
+├── LICENSE
+├── Group_51.pdf
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
