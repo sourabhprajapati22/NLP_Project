@@ -1,0 +1,15 @@
+playwright
+ipykernel
+beautifulsoup4
+tqdm
+pandas
+matplotlib
+transformer
+emoji
+# tensorflow
+torch
+# pyabsa
+# flair
+hf_xet
+textblob
+scikit-learn
