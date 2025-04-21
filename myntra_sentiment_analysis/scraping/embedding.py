@@ -20,8 +20,7 @@ print(device)
 
 # Model and tokenizer
 model_name = "sentence-transformers/all-MiniLM-L6-v2"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModel.from_pretrained(model_name).to(device)
+model = AutoTokenizer.from_pretrained(model_name).to(device)
 model.eval()
 
 # Output path
@@ -34,7 +33,7 @@ with open(output_file, 'w') as f:
         sentiment = row['sentiment_label']  # <-- Add this line
 
         # Tokenize and move to device
-        inputs = tokenizer(sentence, return_tensors="pt", truncation=True, padding=True).to(device)
+        inputs = model(sentence, return_tensors="pt", truncation=True, padding=True).to(device)
         
         # Inference
         with torch.no_grad():
