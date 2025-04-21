@@ -133,7 +133,7 @@ for product_id in results[items[0]]:
 
         review_count+=1
 
-print("Results saved to reviews_same.json")
+print("Results saved to reviews_same.jsonl")
 
 # sys.exit()
 
@@ -200,4 +200,4 @@ for k in range(1,10):
             write_jsonl_line(diff_jsonl_path, record)
             review_count+=1
 
-print("Results saved to reviews_diff.json")
+print("Results saved to reviews_diff.jsonl")
