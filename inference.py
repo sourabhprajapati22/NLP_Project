@@ -38,6 +38,12 @@ def write_jsonl_line(path, data):
 
 jsonl_path = os.path.join(file_current_path, "myntra_sentiment_analysis/data/raw/test_reviews.jsonl")
 
+if os.path.exists(jsonl_path):
+    os.remove(jsonl_path)
+    print("File deleted successfully.")
+else:
+    print("File does not exist.")
+
 
 emoji_sentiment = {
         '😍': ' positive_emoji ',
@@ -324,9 +330,9 @@ def clean_review(text):
 
 
 if __name__=="__main__":
-    # product_id=input("ID of the product: ")
-    # get_test_reviw(product_id)     # i have already sampled data
-    # print("Results saved to test_reviews.json")
+    product_id=input("ID of the product: ")
+    get_test_reviw(product_id)     # i have already sampled data
+    print("Results saved to test_reviews.json")
 
     get_review(jsonl_path)
 
